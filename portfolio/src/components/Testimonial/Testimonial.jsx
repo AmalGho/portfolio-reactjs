@@ -6,8 +6,8 @@ import profilePic1 from "../../images/profile1.jpg";
 import profilePic2 from "../../images/profile2.jpg";
 import profilePic3 from "../../images/profile3.jpg";
 import profilePic4 from "../../images/profile4.jpg";
-import {Pagination} from 'swiper'
-import 'swiper/css/pagination'
+import {Pagination, Autoplay} from 'swiper';
+import 'swiper/css/pagination';
 
 
 const Testimonial = () => {
@@ -48,8 +48,9 @@ const Testimonial = () => {
 
             {/* slider */}
             <Swiper
-                modules= {[Pagination]}
+                modules= {[Pagination, Autoplay]}
                 slidesPerView= {1}
+                autoplay= {true}
                 pagination= {{clickable: true}}
             >
                 {clients.map((client, index) => {
