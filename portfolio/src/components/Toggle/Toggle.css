@@ -15,7 +15,7 @@
 }
 
 .t-button {
-    pointer-events: none;
+    cursor: pointer;
     border-radius: 100%;
     background: var(--orange);
     position: absolute;

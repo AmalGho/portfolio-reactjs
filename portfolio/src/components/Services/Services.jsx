@@ -5,14 +5,26 @@ import Glasses from '../../images/glasses.png'
 import Humble from '../../images/humble.png'
 import Card from '../Card/Card'
 import Ruseme from './Ruseme.pdf'
-
+import { themeContext } from '../../Context'
+import { useContext } from 'react'
+import { motion } from 'framer-motion'
 
 const Services = () => {
+
+    const transition = {duration: 1, type: 'spring'};
+
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
+
     return (
         <div className="services">
             {/* left side */}
             <div className="awesome">
-                <span>My Awesome</span>
+                <span
+                    style={{
+                        color : darkMode ? 'white' : ''
+                    }}
+                >My Awesome</span>
                 <span>services</span>
                 <span>bla bla blamcfghiodjk dkfhjguegfl dvbsnsm bla bla blamcfghiodjk
                     <br />
@@ -25,27 +37,41 @@ const Services = () => {
             </div>
             {/* right side */}
             <div className="cards">
-                <div style={{left: '20rem'}}>
+                <motion.div style={{left: '14rem'}}
+                    initial={{ left: "25rem" }}
+                    whileInView={{ left: "21rem" }}
+                    transition={transition}
+                >
                     <Card  
                         emoji = {HeartEmoji}
                         heading = {'Design'}
                         detail = {'figma, skitch, photoshop, adobe xd'}
                     />
-                </div>
-                <div style={{top: '12rem', left: '4rem'}}>
+                </motion.div>
+
+                <motion.div style={{top: '12rem', left: '-4rem'}}
+                    initial={{ left: "-11rem", top: "12rem" }}
+                    whileInView={{ left: "4rem" }}
+                    transition={transition}
+                >
                     <Card  
                         emoji = {Glasses}
                         heading = {'Developer'}
                         detail = {'html, css, javascript, react'}
                     />
-                </div>
-                <div style={{top: '19rem', left: '18rem'}}>
+                </motion.div>
+
+                <motion.div style={{top: '19rem', left: '12rem'}}
+                    initial={{ top: "19rem", left: "25rem" }}
+                    whileInView={{ left: "18rem" }}
+                    transition={transition}
+                >
                     <Card  
                         emoji = {Humble}
                         heading = {'UI/UX'}
                         detail = {'figma, skitch, photoshop, adobe xd'}
                     />
-                </div>
+                </motion.div>
 
                 <div className="blur s-blur2"></div>
             </div>

@@ -8,8 +8,8 @@ import Portfolio from './components/portfolio/Portfolio';
 import Services from './components/Services/Services';
 import Testimonial from './components/Testimonial/Testimonial';
 import Works from './components/works/Works';
-import {themeContext} from './context';
-import {useContext} from 'react';
+import { themeContext } from './Context';
+import { useContext } from 'react';
 
 function App() {
 

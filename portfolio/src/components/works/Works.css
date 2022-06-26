@@ -69,17 +69,16 @@
     height: 13rem;
     width: 13rem;
     border-radius: 100%;
+    /* darkMode */
     z-index: -1;
 }
-
 .blueCircle {
-    background: #194988;
-    left: 10rem;
-    top: 0;
+    background: #1949b8;
+    left: 18rem;
+    top: 0rem;
 }
-
 .yellowCircle {
     background: #f5c32c;
-    left: 8rem;
+    left: 18rem;
     top: 8rem;
 }
