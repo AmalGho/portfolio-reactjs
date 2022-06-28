@@ -15,7 +15,7 @@ const Portfolio = () => {
     const darkMode = theme.state.darkMode;
 
     return (
-        <div className="portfolio">
+        <div className="portfolio" id='portfolio'>
             {/* heading */}
             <span
                 style={{
